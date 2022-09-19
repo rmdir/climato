@@ -1,5 +1,6 @@
 ---'
 # ids des stations de la zone Adour/Garonne'
+# https://www.infoclimat.fr/opendata/
 stations:
   - 'STATIC0044'
   - 'STATIC0074'
