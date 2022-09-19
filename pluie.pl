@@ -10,6 +10,10 @@ use Data::Dumper;
 use feature qw/say/;
 
 
+# On récupère les relevés journaliers pour les stations météo sur infoclimat
+# On récupère la pluviométrie par heure 
+# On additionne tout et on divise par le nombre de stations.
+
 my $date=Mesures::Utils::get_yesterday();
 my $stations = "";
 foreach my $s (@{Mesures::Utils::get_infoclimat_stations()}) {
@@ -55,6 +59,7 @@ foreach my $s (keys %{$p}) {
 	foreach my $d (keys %{$p->{$s}}) {
 		# pour chaque heure
 		foreach my $h (keys %{$p->{$s}->{$d}}) {
+			# Oscar de la claritude !
 			$cs +=  $p->{$s}->{$d}->{$h}; 
 		}
 	}
